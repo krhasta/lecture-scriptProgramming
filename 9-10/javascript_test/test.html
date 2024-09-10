@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Test</h1>
+    <!-- method 1 -->
+    <!-- <h3>원의 반지름 : <span id="r"></span> </h3>
+    <h3>원의 면적 : <span id="area"></span> </h3>
+    <h3>원의 둘레 : <span id="circum"></span> </h3> -->
+
+    <!-- method 2 -->
+    <h3 id="r">원의 반지름</h3>
+    <h3 id="area">원의 면적</h3>
+    <h3 id="circum">원의 둘레</h3>
+    <script>
+      // let a = 36;
+      // a = parseInt(prompt("섭씨온도 : "));
+      // const b = a * 9/5 + 32; // c to f
+      // alert("화씨온도 = " + b);
+
+      // 원의 면적과 둘레를 계산해서 각각 출력하기
+      let r = parseFloat(prompt("원의 반지름은?"));
+      const PI = 3.14;
+      const circum = 2 * r * PI;
+      const area = PI ** 2 * r;
+      alert(`원의 둘레: ${circum}, 원의 면적: ${area}`);
+
+      // method 1
+      // document.querySelector('#r').innerText= a;
+      // document.querySelector('#area').innerText= area;
+      // document.querySelector('#circum').innerText= circum;
+
+      // method 2
+      document.getElementById('r').innerText = `원의 반지름 : ${r}`;
+      document.getElementById('circum').innerText = `원의 둘레 : ${circum}`;
+      document.getElementById('area').innerText = `원의 면적 : ${area}`;
+
+    </script>
+  </body>
+</html>
