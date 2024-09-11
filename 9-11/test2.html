@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Test</h1>
+    <div id="output"></div>
+    <script>
+      // 연비 환산 예제 : mile/gallon(mpg) --> kilometer/liter(kpl)
+      // 단위 : 1마일 = 1.6킬로미터, 1갤런 = 3.4리터
+      // mpg = 23.2;
+      // kilo = 23.2 * 1.6
+
+      const mpg = [23.2, 30.9, 21.7, 33.4];
+      // method 1
+      const result = [];
+      for (let v of mpg) {
+        let kpl = v * 1.6;
+        kpl /= 3.4;
+        result.push(kpl.toFixed(2));
+      }
+
+      // method 2
+      //   function mpg_to_kpl(mpg) {
+      //     return mpg * 1.6 * 3.4;
+      //   }
+      //   for (let v of mpg) {
+      //     let kpl = mpg_to_kpl(v);
+      //     result.push(kpl.toFixed(2));
+      //   }
+
+      // method 3
+      //   const myfunc = function (mpg) {
+      //     return mpg * 1.6 * 3.4;
+      //   };
+      //   for (let v of mpg) {
+      //     let kpl = myfunc(v);
+      //     result.push(kpl.toFixed(2));
+      //   }
+
+      // method 4
+      //   const myfunc = function (mpg) {
+      //     return (mpg * 1.6 / 3.4).toFixed(2).toString();
+      //   };
+      //   const result = mpg.map(myfunc);
+
+      document.getElementById("output").innerText = `연비(k/l) = ${result}`;
+    </script>
+  </body>
+</html>
